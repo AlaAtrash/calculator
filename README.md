@@ -12,7 +12,7 @@ Projet Excercice Typescript
 
 ### Screenshot ECG
 
-![Image text](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.fr%2FCasio-COLLEGE-Calculatrice-scientifique-calculatrice%2Fdp%2FB0021FBUEW&psig=AOvVaw2T5C26YGuhZwLUqpMLyh1f&ust=1673726270819000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCIifrrCqxfwCFQAAAAAdAAAAABAE)
+![Image text](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepng.fr%2Ftelecharger%2Fcalculator.html&psig=AOvVaw2rp8DFWyhkD9OeiQBSYZuL&ust=1673726560450000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCOCPyLqrxfwCFQAAAAAdAAAAABAE)
 
 ### Langage et Package
 
