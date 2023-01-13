@@ -30,4 +30,7 @@ $ npm install
 
 ```
 $ npx tsc
+$ npx tsc --watch (recompilation automatique)
+
+
 ```
