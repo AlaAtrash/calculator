@@ -12,7 +12,7 @@ Projet Excercice Typescript
 
 ### Screenshot ECG
 
-![Image text](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepng.fr%2Ftelecharger%2Fcalculator.html&psig=AOvVaw2rp8DFWyhkD9OeiQBSYZuL&ust=1673726560450000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCOCPyLqrxfwCFQAAAAAdAAAAABAE)
+![Image text](https://img2.freepng.fr/20171127/58b/calculator-transparent-png-clipart-5a1c37778cfce5.3884893715117986475775.jpg)
 
 ### Langage et Package
 
