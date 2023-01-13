@@ -1,11 +1,9 @@
 {
-    "compilerOptions": {
-        "outDir": "dist",
-        "target":"ES2015",
-        "noEmitOnError": false,
-        "strict":true
-    },
-    "files":[
-        "src/index.ts"
-    ]
+  "compilerOptions": {
+    "outDir": "dist",
+    "target": "ES2015",
+    "noEmitOnError": false,
+    "strict": true
+  },
+  "files": ["src/index.ts"]
 }

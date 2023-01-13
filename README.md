@@ -34,3 +34,13 @@ $ npx tsc --watch (recompilation automatique)
 
 
 ```
+
+## Ajouter un fichier TS
+
+```
+$ Dans le répertoire src, ajouter votre fichier ts ex: sin_cos.ts
+$ Dans le fichier tsconfig.json, ajouter dans la clé "FILES" ==> "src/sin_cos.ts"
+$
+$ Exmple tsconfig apres ajout :
+$ "files": ["src/index.ts", "src/sin_cos.ts"]
+```
