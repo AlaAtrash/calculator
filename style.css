@@ -9,9 +9,7 @@ html {
 }
 
 td {
-    height: 60px;
-    background-color: cyan;
-    font-size: 1em;
+    font-size: 0.8em;
     min-width: 60px;
 }
 
@@ -23,7 +21,20 @@ a {
     font-size: 0.4em;
 }
 
-button {
+button, #value {
     width: 100%;
-    height: 100%;
+    height: 60px;
+}
+
+#value {
+    padding-right: 10px;
+    text-align: right;
+    border: solid 1px;;
+}
+
+.firstvalue {
+    font-size: 0.45em;
+    padding-right: 10px;
+    text-align: right;
+    height: 24px;
 }
