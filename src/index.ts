@@ -1,1 +1,2 @@
-const compt:string = "55"
+const compt: string = "55";
+
