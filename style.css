@@ -1,0 +1,26 @@
+
+html {
+    font-size: 38px;
+}
+
+.clavier {
+    margin: auto;
+    border: solid 1px;
+}
+
+td {
+    height: 60px;
+    background-color: cyan;
+    border: solid 1px;
+    font-size: 1em;
+    min-width: 60px;
+}
+
+a {
+    width: 60px; 
+    text-decoration: none;
+}
+
+.text {
+    font-size: 0.4em;
+}
