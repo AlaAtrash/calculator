@@ -1,7 +1,7 @@
 import { modulo } from './modulo.js';
 import { operationNotDefined } from './notdefined.js';
 export function handleClick() {
-    // Operations associative array with associate function
+    // Operation associative array with associate function
     const operationFunctions = {
         'mod': modulo,
         'x²': operationNotDefined,
@@ -16,7 +16,6 @@ export function handleClick() {
     const value = document.querySelectorAll("#value")[0];
     // operation => save the first value and the operation in the DOM, and reinit the field for the future second value
     if (Object.keys(operationFunctions).indexOf(this.innerHTML) >= 0) {
-        alert(operation.innerHTML + 'x' + value.innerHTML);
         if (operation.innerHTML === '' && value.innerHTML !== '') {
             firstValue.innerHTML = value.innerHTML;
             operation.innerHTML = this.innerHTML;
