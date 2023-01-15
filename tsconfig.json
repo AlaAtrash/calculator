@@ -5,5 +5,5 @@
     "noEmitOnError": false,
     "strict": true
   },
-  "files": ["src/index.ts"]
+  "files": ["src/index.ts", "src/multiplication.ts"]
 }
