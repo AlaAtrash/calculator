@@ -1,17 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+  <body>
+    <div class="center">
+      <form action="">
+        <input type="text" name="display" id="display" />
+        <div class="buttons">
+          <input class="button_clear" type="button" id="clear" value="AC" />
+          <input class="button_cos" type="button" id="cos" value="cos" />
+          <input class="button_sin" type="button" id="sin" value="sin" />
+          <input
+            class="button_operation"
+            type="button"
+            id="divide"
+            value="/"
+          /><br />
+          <input class="button_number" type="button" id="seven" value="7" />
+          <input class="button_number" type="button" id="eight" value="8" />
+          <input class="button_number" type="button" id="nine" value="9" />
+          <input
+            class="button_operation"
+            type="button"
+            id="multiplie"
+            value="*"
+          /><br />
+          <input class="button_number" type="button" id="four" value="4" />
+          <input class="button_number" type="button" id="five" value="5" />
+          <input class="button_number" type="button" id="six" value="6" />
+          <input
+            class="button_operation"
+            type="button"
+            id="subs"
+            value="-"
+          /><br />
+          <input class="button_number" type="button" id="one" value="1" />
+          <input class="button_number" type="button" id="two" value="2" />
+          <input class="button_number" type="button" id="three" value="3" />
+          <input
+            class="button_operation"
+            type="button"
+            id="addition"
+            value="+"
+          /><br />
+          <input class="button_dot" type="button" id="dot" value="." />
+          <input class="button_number" type="button" id="zero" value="0" />
+          <input class="button_operation" type="button" id="mod" value="%" />
+          <input
+            class="button_equal"
+            type="button"
+            id="equal"
+            value="="
+          /><br />
+        </div>
+      </form>
+    </div>
 
-<body>
-    <div></div>
     <script type="module" src="dist/index.js"></script>
-</body>
-
+  </body>
 </html>
