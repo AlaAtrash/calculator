@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  gap:10px;
+}
+
+.container_sin_cos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  width: 300px;
+  height: 50px;
+}
+.container_sin_cos input {
+  width: 200px;
+  font-size: 20px;
+  line-height: 35px;
+  padding: 5px;
+}
+.container_sin_cos button {
+    width: 50px;
+    height: 40px;
+}
+
+.container_resultat{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width:300px;
+    height: 50px;
+    Border: Green Solid 1px;
+    border-radius: 10px;
+}
