@@ -4,6 +4,8 @@ import {operationNotDefined} from './notdefined.js'
 
 export function handleClick (this: HTMLElement) {
 
+    const key = this.getAttribute('value')
+
     // operation function model (2 string operand parameters and a return string)
     interface operationFunction {
         (firstOperand: string, secondOperand: string): string
@@ -16,7 +18,7 @@ export function handleClick (this: HTMLElement) {
 
     // Operation associative array with associate function
     const operationFunctions: operationFunctionInterface = {
-        'mod' : modulo,
+        '%' : modulo,
         'x²'  : operationNotDefined,
         '/'   : operationNotDefined,
         '*'   : operationNotDefined,
@@ -25,62 +27,74 @@ export function handleClick (this: HTMLElement) {
     }
 
     // get 3 parameters from DOM : operand1 operation operand2
-    const firstValue = document.querySelectorAll("#firstvalue")[0];
-    const operation = document.querySelectorAll("#operation")[0];
-    const value = document.querySelectorAll("#value")[0];
+    let firstValue = document.querySelectorAll("#firstvalue")[0].getAttribute('value');
+    let operation = document.querySelectorAll("#operation")[0].getAttribute('value');
+    let value = document.querySelectorAll("#display")[0].getAttribute('value');
 
     // operation => save the first value and the operation in the DOM, and reinit the field for the future second value
-    if (Object.keys(operationFunctions).indexOf(this.innerHTML) >= 0) {
+    if (Object.keys(operationFunctions).indexOf(key!) >= 0) {
 
-        if (operation.innerHTML === '' && value.innerHTML !== '') {           
-            firstValue.innerHTML = value.innerHTML
-            operation.innerHTML = this.innerHTML
-            value.innerHTML = ''
+        if (operation === '' && value !== '') {           
+            firstValue = value
+            operation = key
+            value = ''
         }
 
     } else {
 
         // it's not an operation => it's a key to treat
-        switch(this.innerHTML) {
-            case 'clear': {
-                firstValue.innerHTML = ''
-                operation.innerHTML = ''
-                value.innerHTML = ''
+        switch(key) {
+            case 'AC': {
+                firstValue = ''
+                operation = ''
+                value = ''
                 break;
             }
             case '+/-': {
                 // there is already one => delete it else add it
-                if (value.innerHTML.indexOf('-') === 0) {
-                    value.innerHTML = value.innerHTML.substring(1)
+                if (value!.indexOf('-') === 0) {
+                    value = value!.substring(1)
                 } else {
-                    value.innerHTML = '-' + value.innerHTML
+                    value = '-' + value
                 }
                 break;
             }
             case '.': {
                 // Decimal point not present => add it
-                if (value.innerHTML.indexOf('.') < 0) {
-                    value.innerHTML += '.'
+                if (value!.indexOf('.') < 0) {
+                    value += '.'
                 }
                 break;
             }
             case '=': {
                 // call operation function with the 2 parameters if thet are. Else nothing
-                if (firstValue.innerHTML !== '') {
-                    value.innerHTML = operationFunctions[operation.innerHTML](firstValue.innerHTML, value.innerHTML)
-                    operation.innerHTML = ''
-                    firstValue.innerHTML = ''
+                if (firstValue !== '') {
+                    value = operationFunctions[operation!](firstValue!, value!)
+                    operation = ''
+                    firstValue = ''
                 }
+                break;
+            }
+            case 'cos': {
+                operationNotDefined('', '')
+                break;
+            }
+            case 'sin': {
+                operationNotDefined('', '')
                 break;
             }
             default: {
                 // Rest the numeric keys => add it at the end of the value
-                value.innerHTML += this.innerHTML
+                value += key!
                 break;
             }
 
         }
 
     }
+
+    document.querySelectorAll("#firstvalue")[0].setAttribute('value', firstValue!);
+    document.querySelectorAll("#operation")[0].setAttribute('value', operation!);
+    document.querySelectorAll("#display")[0].setAttribute('value', value!);
 
 }
