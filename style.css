@@ -1,3 +1,136 @@
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(#9cebfc,#6ae1fb);
+}
+
+.center {
+  width: 400px;
+  background: black;
+}
+
+input[type="text"] {
+  height: 70px;
+  width: 250px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: right;
+  padding-right: 20px;
+  background-color: #636363;
+}
+
+form .buttons{
+  width: 400px;
+  margin-bottom: 15px;
+  padding: 10px 0;
+}
+
+.button_number {
+  width: 58px;
+  height: 55px; 
+  margin-top: 6px;
+  background-color: #d5d5d5;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.button_number:hover {
+  transition: .3s;
+  background-color: #616161;
+}
+
+.button_operation {
+  width: 58px;
+  height: 55px; 
+  background-color: #FFBB37; 
+  color: #383838;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.button_operation:hover {
+  transition: .3s;
+  background-color: #a87818;
+}
+
+.button_dot {
+  width: 58px;
+  height: 55px; 
+  background-color: #d5d5d5; 
+  color: black;
+  cursor: pointer;
+}
+
+.button_dot:hover {
+  transition: .3s;
+  background-color: #616161;
+}
+
+.button_clear {
+  width: 58px;
+  height: 55px; 
+  background-color: #df5c34; 
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button_clear:hover {
+  transition: .3s;
+  background-color: #9c3f23;
+}
+
+.button_equal {
+  width: 58px;
+  height: 55px;
+  color: white;
+  background-color: #df5c34;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.button_equal:hover {
+  transition: .3s;
+  background-color: #9c3f23;
+}
+
+.button_cos {
+  width: 58px;
+  height: 55px; 
+  border-radius: 3px; 
+  background-color: #5A93C7; 
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.button_cos:hover {
+  transition: .3s;
+  background-color: #335575;
+}
+
+.button_sin {
+  width: 58px;
+  height: 55px; 
+  background-color: #5AC77F; 
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+}
 
 html {
     font-size: 38px;
@@ -30,11 +163,4 @@ button, #value {
     padding-right: 10px;
     text-align: right;
     border: solid 1px;;
-}
-
-.firstvalue {
-    font-size: 0.45em;
-    padding-right: 10px;
-    text-align: right;
-    height: 24px;
 }
