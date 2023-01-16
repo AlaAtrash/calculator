@@ -1,5 +1,16 @@
 {
-  "dependencies": {
-    "typescript": "^4.9.4"
+  "name": "typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.8.4"
   }
 }
