@@ -12,3 +12,4 @@ function multiplication(a: number, b: number): number {
 };
 
 button.addEventListener('click', multiplication(numberA, numberB), alert("Le résultat de votre multiplication est " + resultat))
+
