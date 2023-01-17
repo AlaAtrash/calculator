@@ -1,5 +1,6 @@
 import { modulo } from './modulo.js';
 import { operationNotDefined } from './notdefined.js';
+import { Trigo } from "./sin_cos.js";
 export function handleClick() {
     const key = this.getAttribute('value');
     // Operation associative array with associate function
@@ -59,11 +60,13 @@ export function handleClick() {
                 break;
             }
             case 'cos': {
-                operationNotDefined('', '');
+                const trigo = new Trigo(+value);
+                value = trigo.cosinus().toString();
                 break;
             }
             case 'sin': {
-                operationNotDefined('', '');
+                const trigo = new Trigo(+value);
+                value = trigo.sinus().toString();
                 break;
             }
             default: {
