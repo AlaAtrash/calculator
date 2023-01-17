@@ -17,7 +17,7 @@ export function handleClick() {
     let operation = document.querySelectorAll("#operation")[0].getAttribute('value');
     let value = document.querySelectorAll("#display")[0].getAttribute('value');
     // operation => save the first value and the operation in the DOM, and reinit the field for the future second value
-    if (Object.keys(operationFunctions).indexOf(key) >= 0 && value !== '') {
+    if (Object.keys(operationFunctions).indexOf(key) >= 0 && key !== '-') {
         if (operation === '' && value !== '') {
             firstValue = value;
             operation = key;
@@ -34,9 +34,14 @@ export function handleClick() {
                 break;
             }
             case '-': {
-                // there is already one => delete it else add it
+                // there is already one => nothing
                 if (value === '') {
                     value = '-';
+                }
+                else if (value !== '-') {
+                    firstValue = value;
+                    operation = key;
+                    value = '';
                 }
                 break;
             }
@@ -57,13 +62,17 @@ export function handleClick() {
                 break;
             }
             case 'cos': {
-                const trigo = new Trigo(+value);
-                value = trigo.cosinus().toString();
+                if (value !== '') {
+                    const trigo = new Trigo(+value);
+                    value = trigo.cosinus().toString();
+                }
                 break;
             }
             case 'sin': {
-                const trigo = new Trigo(+value);
-                value = trigo.sinus().toString();
+                if (value !== '') {
+                    const trigo = new Trigo(+value);
+                    value = trigo.sinus().toString();
+                }
                 break;
             }
             default: {
