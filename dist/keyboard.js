@@ -17,7 +17,7 @@ export function handleClick() {
     let operation = document.querySelectorAll("#operation")[0].getAttribute('value');
     let value = document.querySelectorAll("#display")[0].getAttribute('value');
     // operation => save the first value and the operation in the DOM, and reinit the field for the future second value
-    if (Object.keys(operationFunctions).indexOf(key) >= 0) {
+    if (Object.keys(operationFunctions).indexOf(key) >= 0 && value !== '') {
         if (operation === '' && value !== '') {
             firstValue = value;
             operation = key;
@@ -33,13 +33,10 @@ export function handleClick() {
                 value = '';
                 break;
             }
-            case '+/-': {
+            case '-': {
                 // there is already one => delete it else add it
-                if (value.indexOf('-') === 0) {
-                    value = value.substring(1);
-                }
-                else {
-                    value = '-' + value;
+                if (value === '') {
+                    value = '-';
                 }
                 break;
             }
