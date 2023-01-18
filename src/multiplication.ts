@@ -8,7 +8,6 @@ let resultat: number
 
 function multiplication(a: number, b: number): number {
         resultat = a * b
+        alert("Le résultat de votre multiplication est " + resultat)
         return resultat       
 };
-
-button.addEventListener('click', multiplication(numberA, numberB), alert("Le résultat de votre multiplication est " + resultat))
