@@ -1,14 +1,23 @@
 "use strict";
 let inputA = document.querySelector('#numberA');
-let numberA = inputA.value;
+let numberA;
 let inputB = document.querySelector('#numberB');
-let numberB = inputB.value;
+let numberB;
 let button = document.querySelector('.button-multiplication');
+let affichageResultat = document.querySelector('#resultat');
 let resultat;
+
 function multiplication(a, b) {
-    resultat = a * b;
-    return resultat;
+    if (a == null || b == null || isNaN(a) || isNaN(b)) {
+        affichageResultat.textContent = "Merci de renseigner uniquement des valeurs numériques";
+    }
+    else {
+        resultat = a * b;
+        affichageResultat.textContent = "Résultat : " + resultat;
+    }
 }
-;
-button.addEventListener('click', multiplication(numberA, numberB), alert("Le résultat de votre multiplication est " + resultat));
-// button.addEventListener('click', multiplication(numberA, numberB))
+button.addEventListener('click', () => {
+    numberA = parseInt(inputA.value);
+    numberB = parseInt(inputB.value);
+    multiplication(numberA, numberB);
+});

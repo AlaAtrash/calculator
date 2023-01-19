@@ -17,6 +17,7 @@ Projet Excercice Typescript
 ### Langage et Package
 
 - TypeScript
+- Nodejs
 
 ## Installation
 
@@ -31,8 +32,6 @@ $ npm install
 ```
 $ npx tsc
 $ npx tsc --watch (recompilation automatique)
-
-
 ```
 
 ## Ajouter un fichier TS
@@ -43,4 +42,11 @@ $ Dans le fichier tsconfig.json, ajouter dans la clé "files" ==> "src/sin_cos.t
 $
 $ Exemple tsconfig apres ajout :
 $ "files": ["src/index.ts", "src/sin_cos.ts"]
+```
+
+## Tester son fichier JS
+
+```
+$ Dans un terminal taper la commande suivante:
+$ node ./dist/<name_of_file>.js
 ```
