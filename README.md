@@ -36,6 +36,13 @@ $ npx tsc --watch (recompilation automatique)
 
 ```
 
+## Compilation npm
+
+```
+$ npm run build
+
+```
+
 ## Ajouter un fichier TS
 
 ```
