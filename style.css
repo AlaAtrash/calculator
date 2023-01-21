@@ -1,138 +1,106 @@
-*{
+* {
   margin: 0;
   padding: 0;
-  outline: none;
   box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
 }
 
 body {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
+  background-color: #e8c055;
+  background: linear-gradient(45deg, #e8c055, #e9dab2);
   min-height: 100vh;
-  background: linear-gradient(#9cebfc,#6ae1fb);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  color: rgb(246, 246, 246);
+  text-shadow: 0 3px 3px #00000033;
 }
 
-.center {
-  width: 400px;
-  background: black;
+.calculator {
+  width: clamp(23rem, 80vw, 50rem);
+  background-color: #404f66;
+  border-radius: 9px;
 }
 
-input[type="text"] {
-  height: 70px;
-  width: 250px;
-  margin-top: 40px;
-  margin-bottom: 10px;
-  color: white;
-  font-size: 22px;
-  font-weight: bold;
-  text-align: right;
-  padding-right: 20px;
-  background-color: #636363;
+.calculator-body {
+  display: grid;
+  border-radius: 9px;
+  /* height: 100%; */
+  padding: 3rem;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  column-gap: 1rem;
+  row-gap: 1rem;
+  box-shadow: 0 16px 16px #00000031;
 }
 
-form .buttons{
-  width: 400px;
-  margin-bottom: 15px;
-  padding: 10px 0;
+.calculator-body > div {
+  background-color: #e8c055;
+  grid-column-end: span 1;
+  min-height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  box-shadow: 0 4px 4px #00000033;
 }
 
-.button_number {
-  width: 58px;
-  height: 55px; 
-  margin-top: 6px;
-  background-color: #d5d5d5;
-  cursor: pointer;
-  font-weight: bold;
+.calculator-body .key-opt {
+  height: 2.8rem;
+  margin-top: 1.5rem;
 }
 
-.button_number:hover {
-  transition: .3s;
-  background-color: #616161;
+.calculator-body .screen {
+  position: relative;
+  grid-column-end: span 5;
+  justify-content: end;
+  padding-right: 1rem;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
 }
 
-.button_operation {
-  width: 58px;
-  height: 55px; 
-  background-color: #FFBB37; 
-  color: #383838;
-  cursor: pointer;
-  font-weight: bold;
+.calculator-body .screen::after {
+  position: absolute;
+  z-index: 5;
+  content: '';
+  width: 800px;
+  height: 100px;
+  background: #6699b1;
+  transform: skew(-50deg) translateX(50%);
+}
+.calculator-body .result {
+  position: relative;
+  z-index: 10;
+}
+.calculator-body .screen,
+.calculator-body .key-blue {
+  background-color: #709db0;
 }
 
-.button_operation:hover {
-  transition: .3s;
-  background-color: #a87818;
+.calculator-body .key-equal {
+  grid-row-end: span 3;
 }
 
-.button_dot {
-  width: 58px;
-  height: 55px; 
-  background-color: #d5d5d5; 
-  color: black;
-  cursor: pointer;
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 1.5rem;
+  }
+  .calculator {
+    min-width: 100%;
+  }
+  .calculator-body {
+    padding: 1.5rem;
+  }
 }
-
-.button_dot:hover {
-  transition: .3s;
-  background-color: #616161;
-}
-
-.button_clear {
-  width: 58px;
-  height: 55px; 
-  background-color: #df5c34; 
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.button_clear:hover {
-  transition: .3s;
-  background-color: #9c3f23;
-}
-
-.button_equal {
-  width: 58px;
-  height: 55px;
-  color: white;
-  background-color: #df5c34;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 18px;
-}
-
-.button_equal:hover {
-  transition: .3s;
-  background-color: #9c3f23;
-}
-
-.button_cos {
-  width: 58px;
-  height: 55px; 
-  border-radius: 3px; 
-  background-color: #5A93C7; 
-  color: black;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.button_cos:hover {
-  transition: .3s;
-  background-color: #335575;
-}
-
-.button_sin {
-  width: 58px;
-  height: 55px; 
-  background-color: #5AC77F; 
-  color: black;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.button_sin:hover {
-  transition: .3s;
-  background-color: #337a4b;
+@media screen and (max-width: 500px) {
+  body {
+    font-size: 1rem;
+  }
+  .calculator-body {
+    padding: 1rem;
+  }
 }

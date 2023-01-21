@@ -5,63 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
-    <div class="center">
-      <form action="">
-        <input type="text" name="display" id="display" />
-        <div class="buttons">
-          <input class="button_clear" type="button" id="clear" value="AC" />
-          <input class="button_cos" type="button" id="cos" value="cos" />
-          <input class="button_sin" type="button" id="sin" value="sin" />
-          <input
-            class="button_operation"
-            type="button"
-            id="divide"
-            value="/"
-          /><br />
-          <input class="button_number" type="button" id="seven" value="7" />
-          <input class="button_number" type="button" id="eight" value="8" />
-          <input class="button_number" type="button" id="nine" value="9" />
-          <input
-            class="button_operation"
-            type="button"
-            id="multiplie"
-            value="*"
-          /><br />
-          <input class="button_number" type="button" id="four" value="4" />
-          <input class="button_number" type="button" id="five" value="5" />
-          <input class="button_number" type="button" id="six" value="6" />
-          <input
-            class="button_operation"
-            type="button"
-            id="subs"
-            value="-"
-          /><br />
-          <input class="button_number" type="button" id="one" value="1" />
-          <input class="button_number" type="button" id="two" value="2" />
-          <input class="button_number" type="button" id="three" value="3" />
-          <input
-            class="button_operation"
-            type="button"
-            id="addition"
-            value="+"
-          /><br />
-          <input class="button_dot" type="button" id="dot" value="." />
-          <input class="button_number" type="button" id="zero" value="0" />
-          <input class="button_operation" type="button" id="mod" value="%" />
-          <input
-            class="button_equal"
-            type="button"
-            id="equal"
-            value="="
-          /><br />
+    <div class="section-calculator">
+      <div class="calculator">
+        <div class="calculator-body">
+          <div class="screen">
+            <div class="result">3+6</div>
+          </div>
+          <div class="key key-opening-parenthesise key-opt">(</div>
+          <div class="key key-closing-parenthesise key-opt">)</div>
+          <div class="key key-cos key-opt">COS</div>
+          <div class="key key-sin key-opt">SIN</div>
+          <div class="key key-tan key-opt">TAN</div>
+          <div class="key key-7 key-blue">7</div>
+          <div class="key key-7 key-blue">8</div>
+          <div class="key key-7 key-blue">9</div>
+          <div class="key key-division">/</div>
+          <div class="key key-C">C</div>
+          <div class="key key-4 key-blue">4</div>
+          <div class="key key-5 key-blue">5</div>
+          <div class="key key-6 key-blue">6</div>
+          <div class="key key-multiplication">x</div>
+          <div class="key key-equal">=</div>
+          <div class="key key-1 key-blue">1</div>
+          <div class="key key-2 key-blue">2</div>
+          <div class="key key-3 key-blue">3</div>
+          <div class="key key-substraction">-</div>
+          <div class="key key-plus-or-minus key-blue">+/-</div>
+          <div class="key key-0 key-blue">0</div>
+          <div class="key key-dot key-blue">.</div>
+          <div class="key key-addition">+</div>
         </div>
-      </form>
+      </div>
     </div>
-
     <script type="module" src="dist/index.js"></script>
   </body>
 </html>
