@@ -85,6 +85,17 @@ body {
   grid-row-end: span 3;
 }
 
+.calculator-body .key {
+  cursor: pointer;
+  transition: background-color 0.3s ease-out;
+}
+.calculator-body .key:hover {
+  background-color: #c7a549;
+}
+.calculator-body .key-blue:hover {
+  background-color: #5c8191;
+}
+
 @media screen and (max-width: 800px) {
   body {
     font-size: 1.5rem;
