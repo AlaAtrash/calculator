@@ -1,3 +1,4 @@
+/*** Reset CSS ***/
 * {
   margin: 0;
   padding: 0;
@@ -13,11 +14,21 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   font-size: 1.75rem;
   color: rgb(246, 246, 246);
   text-shadow: 0 3px 3px #00000033;
 }
 
+h1 {
+  text-align: center;
+  font-size: 3.6rem;
+  margin-bottom: 2.4rem;
+  line-height: 1.05;
+  text-shadow: 0 6px 6px #00000033;
+}
+
+/*** Calculator element ***/
 .calculator {
   width: clamp(23rem, 80vw, 50rem);
   background-color: #404f66;
@@ -27,7 +38,6 @@ body {
 .calculator-body {
   display: grid;
   border-radius: 9px;
-  /* height: 100%; */
   padding: 3rem;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(6, 1fr);
@@ -75,6 +85,7 @@ body {
 .calculator-body .result {
   position: relative;
   z-index: 10;
+  letter-spacing: 0.25rem;
 }
 .calculator-body .screen,
 .calculator-body .key-blue {
@@ -96,9 +107,13 @@ body {
   background-color: #5c8191;
 }
 
+/*** Media queries ***/
 @media screen and (max-width: 800px) {
   body {
     font-size: 1.5rem;
+  }
+  h1 {
+    font-size: 2.6rem;
   }
   .calculator {
     min-width: 100%;
