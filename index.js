@@ -7,6 +7,14 @@ import * as path from 'path';
 const sourceDirectory = ['./'];
 const destinationDirectory = 'dist/';
 
+if (fs.existsSync('./dist')) {
+  fs.rmSync(destinationDirectory, { recursive: true });
+}
+
+if (!fs.existsSync('./dist')) {
+  fs.mkdirSync('./dist');
+}
+
 sourceDirectory.forEach((dir) => {
   cpyFile(dir, destinationDirectory);
 });
