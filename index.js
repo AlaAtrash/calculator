@@ -7,10 +7,17 @@ import * as path from "path";
 const sourceDirectory = ["./"];
 const destinationDirectory = "dist/";
 
-sourceDirectory.forEach(dir =>{
-    cpyFile(dir,destinationDirectory)
-})
+if (fs.existsSync("./dist")) {
+  fs.rmSync(destinationDirectory, { recursive: true });
+}
 
+if (!fs.existsSync("./dist")) {
+  fs.mkdirSync("./dist");
+}
+
+sourceDirectory.forEach((dir) => {
+  cpyFile(dir, destinationDirectory);
+});
 
 function cpyFile(directory, destination) {
   fs.readdir(directory, (err, files) => {
@@ -23,16 +30,12 @@ function cpyFile(directory, destination) {
       if (path.extname(file) === ".html" || path.extname(file) === ".css") {
         const sourceFile = path.join(directory, file);
         let destinationFile = path.join(destination, directory);
-
         fs.mkdir(destinationFile, { recursive: true }, (err) => {
-            if (err) throw err;
-          });
-
+          if (err) throw err;
+        });
         destinationFile = path.join(destinationFile, file);
-
         const readStream = fs.createReadStream(sourceFile);
         const writeStream = fs.createWriteStream(destinationFile);
-
         readStream.pipe(writeStream);
       }
     });
