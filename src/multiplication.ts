@@ -1,13 +1,13 @@
-const inputA = <HTMLInputElement>document.getElementById('numberA')
-const inputB = <HTMLInputElement>document.getElementById('numberB')
-let numberA: number
+let inputA = document.querySelector('#numberA') as HTMLInputElement;
+let numberA: number 
+let inputB = document.querySelector('#numberB') as HTMLInputElement;
 let numberB: number
-const button = <HTMLButtonElement>document.querySelector('.button-multiplication')
-const affichageResultat = <HTMLParagraphElement>document.getElementById('resultat')
+let button = document.querySelector('.button-multiplication') as HTMLButtonElement;
+let affichageResultat = document.querySelector('#resultat') as HTMLParagraphElement
 let resultat: number
 
 
-const multiplication = (a: number, b: number) => {
+function multiplication(a: number, b: number) {
 
 	if (a == null || b == null || isNaN(a) || isNaN(b)) {
 
