@@ -4,19 +4,19 @@ const inputB = document.getElementById('numberB');
 let numberA;
 let numberB;
 const button = document.querySelector('.button-multiplication');
-const affichageResultat = document.getElementById('resultat');
-let resultat;
+const showResult = document.getElementById('resultat');
+let result;
 const multiplication = (a, b) => {
     if (a == null || b == null || isNaN(a) || isNaN(b)) {
-        affichageResultat.textContent = "Merci de renseigner uniquement des valeurs numériques";
+        showResult.textContent = "Merci de renseigner uniquement des valeurs numériques";
     }
     else {
-        resultat = a * b;
-        affichageResultat.textContent = "Résultat : " + resultat;
+        result = a * b;
+        showResult.textContent = "Résultat : " + result.toFixed(2);
     }
 };
 button.addEventListener('click', () => {
-    numberA = parseInt(inputA.value);
-    numberB = parseInt(inputB.value);
+    numberA = parseFloat(inputA.value);
+    numberB = parseFloat(inputB.value);
     multiplication(numberA, numberB);
 });
