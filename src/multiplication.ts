@@ -17,15 +17,15 @@ const multiplication = (a: number, b: number) => {
 	else {
 
 		result = a * b;
-		showResult.textContent = "Résultat : " + result;
+		showResult.textContent = "Résultat : " + result.toFixed(2);
 
 	}
 
 }
 
 button.addEventListener('click', () => {
-	numberA = parseInt(inputA.value)
-	numberB = parseInt(inputB.value)
+	numberA =  parseFloat(inputA.value)
+	numberB = parseFloat(inputB.value)
 	multiplication(numberA, numberB)
 })
 
