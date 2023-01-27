@@ -5,14 +5,19 @@ let numberA;
 let numberB;
 const button = document.querySelector('.button-multiplication');
 const showResult = document.getElementById('resultat');
-let result;
-const multiplication = (a, b) => {
-    if (a == null || b == null || isNaN(a) || isNaN(b)) {
+let result = 1;
+const multiplication = (...numbers) => {
+    if (numbers.includes(NaN) || numbers.includes(null)) {
         showResult.textContent = "Merci de renseigner uniquement des valeurs numériques";
     }
     else {
-        result = a * b;
+        console.log("ok ce sont des nombres");
+        for (const number of numbers) {
+            result *= number;
+        }
+        console.log(result);
         showResult.textContent = "Résultat : " + result.toFixed(2);
+        result = 1;
     }
 };
 button.addEventListener('click', () => {
