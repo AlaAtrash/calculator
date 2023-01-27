@@ -3,21 +3,21 @@ const inputB = <HTMLInputElement>document.getElementById('numberB')
 let numberA: number
 let numberB: number
 const button = <HTMLButtonElement>document.querySelector('.button-multiplication')
-const affichageResultat = <HTMLParagraphElement>document.getElementById('resultat')
-let resultat: number
+const showResult = <HTMLParagraphElement>document.getElementById('resultat')
+let result: number
 
 
 const multiplication = (a: number, b: number) => {
 
 	if (a == null || b == null || isNaN(a) || isNaN(b)) {
 
-		affichageResultat.textContent = "Merci de renseigner uniquement des valeurs numériques"
+		showResult.textContent = "Merci de renseigner uniquement des valeurs numériques"
 
 	}
 	else {
 
-		resultat = a * b;
-		affichageResultat.textContent = "Résultat : " + resultat;
+		result = a * b;
+		showResult.textContent = "Résultat : " + result;
 
 	}
 
@@ -28,3 +28,6 @@ button.addEventListener('click', () => {
 	numberB = parseInt(inputB.value)
 	multiplication(numberA, numberB)
 })
+
+
+
