@@ -5,5 +5,6 @@
     "noEmitOnError": false,
     "strict": true
   },
-  "include": ["src/**/*.ts"]
+  "include": ["src/multiplication.ts"]
+
 }

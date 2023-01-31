@@ -32,8 +32,6 @@ $ npm install
 ```
 $ npx tsc
 $ npx tsc --watch (recompilation automatique)
-
-
 ```
 
 ## Compilation npm
@@ -59,3 +57,4 @@ $ "files": ["src/index.ts", "src/sin_cos.ts"]
 $ Dans un terminal taper la commande suivante:
 $ node ./dist/<name_of_file>.js
 ```
+
