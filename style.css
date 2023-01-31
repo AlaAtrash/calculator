@@ -1,0 +1,132 @@
+/*** Reset CSS ***/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+}
+
+body {
+  background-color: #e8c055;
+  background: linear-gradient(45deg, #e8c055, #e9dab2);
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 1.75rem;
+  color: rgb(246, 246, 246);
+  text-shadow: 0 3px 3px #00000033;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3.6rem;
+  margin-bottom: 2.4rem;
+  line-height: 1.05;
+  text-shadow: 0 6px 6px #00000033;
+}
+
+/*** Calculator element ***/
+.calculator {
+  width: clamp(23rem, 80vw, 50rem);
+  background-color: #404f66;
+  border-radius: 9px;
+}
+
+.calculator-body {
+  display: grid;
+  border-radius: 9px;
+  padding: 3rem;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  column-gap: 1rem;
+  row-gap: 1rem;
+  box-shadow: 0 16px 16px #00000031;
+}
+
+.calculator-body > div {
+  background-color: #e8c055;
+  grid-column-end: span 1;
+  min-height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  box-shadow: 0 4px 4px #00000033;
+}
+
+.calculator-body .key-opt {
+  height: 2.8rem;
+  margin-top: 1.5rem;
+}
+
+.calculator-body .screen {
+  position: relative;
+  grid-column-end: span 5;
+  justify-content: end;
+  padding-right: 1rem;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+}
+
+.calculator-body .screen::after {
+  position: absolute;
+  z-index: 5;
+  content: '';
+  width: 800px;
+  height: 100px;
+  background: #6699b1;
+  transform: skew(-50deg) translateX(50%);
+}
+.calculator-body .result {
+  position: relative;
+  z-index: 10;
+  letter-spacing: 0.25rem;
+}
+.calculator-body .screen,
+.calculator-body .key-blue {
+  background-color: #709db0;
+}
+
+.calculator-body .key-equal {
+  grid-row-end: span 3;
+}
+
+.calculator-body .key {
+  cursor: pointer;
+  transition: background-color 0.3s ease-out;
+}
+.calculator-body .key:hover {
+  background-color: #c7a549;
+}
+.calculator-body .key-blue:hover {
+  background-color: #5c8191;
+}
+
+/*** Media queries ***/
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 1.5rem;
+  }
+  h1 {
+    font-size: 2.6rem;
+  }
+  .calculator {
+    min-width: 100%;
+  }
+  .calculator-body {
+    padding: 1.5rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  body {
+    font-size: 1rem;
+  }
+  .calculator-body {
+    padding: 1rem;
+  }
+}

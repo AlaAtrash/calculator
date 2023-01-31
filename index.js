@@ -1,11 +1,11 @@
-import * as fs from "fs";
-import { execSync } from "child_process";
-import * as path from "path";
+import * as fs from 'fs';
+import { execSync } from 'child_process';
+import * as path from 'path';
 
 // example file and directory to copy
 //const sourceDirectory = ["./", "./style"];
-const sourceDirectory = ["./"];
-const destinationDirectory = "dist/";
+const sourceDirectory = ['./'];
+const destinationDirectory = 'dist/';
 
 if (fs.existsSync("./dist")) {
   fs.rmSync(destinationDirectory, { recursive: true });
@@ -27,7 +27,7 @@ function cpyFile(directory, destination) {
     }
 
     files.forEach((file) => {
-      if (path.extname(file) === ".html" || path.extname(file) === ".css") {
+      if (path.extname(file) === '.html' || path.extname(file) === '.css') {
         const sourceFile = path.join(directory, file);
         let destinationFile = path.join(destination, directory);
         fs.mkdir(destinationFile, { recursive: true }, (err) => {
@@ -43,4 +43,4 @@ function cpyFile(directory, destination) {
 }
 
 //compile Ts file
-execSync("npx tsc");
+execSync('npx tsc');
